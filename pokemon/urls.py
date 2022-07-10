@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from rest_framework.authtoken.views import obtain_auth_token
 from django.urls import path
-from .views import random_pokemon_team_generator, index, new_user, generate_pokemon_team
+from .views import random_pokemon_team_generator, index, new_user, generate_pokemon_team, delete_pokemon_team
 
 urlpatterns = [
     path('', index, name='home'),
@@ -13,4 +13,5 @@ urlpatterns = [
     path("new-user/", new_user, name="new-user"),
     path('pokemon_team_api', random_pokemon_team_generator, name='api'),
     path('generate_team/<int:user_id>', generate_pokemon_team, name='generate-team'),
+    path('delete_team/<int:user_id>', delete_pokemon_team, name='delete-pokemon-team'),
 ]

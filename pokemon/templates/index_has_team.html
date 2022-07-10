@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-<title>Tarefas</title>
+<title> {{ poke_team.pokemon_trainer }}'s Pokémon Team</title>
 {% endblock %}
 
 
@@ -30,5 +30,8 @@
 </p>
 <p>
     <a href="{% url 'auth-logout' %}">Logout</a>
+</p>
+<p>
+    <a href="{% url 'delete-pokemon-team' poke_team.pokemon_trainer.id %}">Throw Away Your Pokémons</a>
 </p>
 {% endblock %}

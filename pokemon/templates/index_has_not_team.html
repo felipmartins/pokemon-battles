@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block title %}
-<title>Tarefas</title>
+<title> Pokémon Trainer - {{ user.username }}</title>
 {% endblock %}
 
 
 {% block content %}
 <p>
-<a href="{% url 'generate-team' user_id %}"> Generate team</a> 
+<a href="{% url 'generate-team' user.id %}"> Generate team</a> 
 </p>
 <p>
 <a href="{% url 'auth-logout' %}">Logout</a>
