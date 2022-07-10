@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Tarefas</title>
+{% endblock %}
+
+
+{% block content %}
+<p>
+<a href="{% url 'generate-team' user_id %}"> Generate team</a> 
+</p>
+<p>
+<a href="{% url 'auth-logout' %}">Logout</a>
+</p>
+{% endblock %}
