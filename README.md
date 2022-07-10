@@ -53,3 +53,5 @@ python3 manage.py runserver
 ```bash
 localhost:8000
 ```
+
+# Be Happy
